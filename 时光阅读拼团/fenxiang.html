@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分享</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/html2canvas.js"></script>
+	</head>
+	<body>
+		<div class="share" id="share">
+			<img src="img/rollscreen.png" alt="" class="share_img" />
+			<img src="" alt="" class="share_code" style="border:1px solid #FFF;background-color: #FFF;"/>
+		</div>
+		<a class="share_button" href="" download="分享图片">
+			<!--<img border="0" src="img/rollscreen.png" alt="">-->
+			长按保存图片，分享好友
+		</a>
+		<img class="share_bcimg" src=""/>
+		<script type="text/javascript">
+			function save() {
+
+			    var img = document.getElementById("testImg");
+			
+			    var alink = document.createElement("a");
+			
+			    alink.href = img.src;
+			
+			    alink.click();
+			
+			}
+			html2canvas(document.querySelector("#share")).then(canvas => {
+//   				    document.body.appendChild(canvas)
+   				    var imgUri = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); // 获取生成的图片的url
+// 				    $(".share_code").hide();
+   				    $('.share_bcimg').attr("src",imgUri);
+   				},{
+   					width: $('#swiper-slide2').width(),
+           		    height: $('#swiper-slide2').height()
+   				}
+   				);
+   			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我创建的拼团详情</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body style="background-color: #F7F7F7;">
+		<div class="detail">
+			<img src="img/rollscreen.png" alt="" class="detail_img" />
+		</div>
+		<div class="detail_box">
+			<div class="detail_box_empty"></div>
+			<div class="detail_box_button">剩余：<span></span>：<span></span>：<span></span></div>
+			<!--进度条状态-->
+			<div class="detail_status_box">
+				<div class="detail_sb_number">
+					<div class="detail_sn_number"></div>
+					<div class="detail_sn_number">3人</div>
+					<div class="detail_sn_number">5人</div>
+					<div class="detail_sn_number">10人</div>
+					<!--<div class="detail_sn_status">4人已团</div>-->
+				</div>
+				<!--<div class="detail_sb_status">
+					<div class="detail_ss_progress" style="width:25%;"></div>
+					<div class="detail_ss_progress" style="width:25%;"></div>
+					<div class="detail_ss_box">
+						<div class="detail_sb_imgbox"><img src="img/succeed1.png"/></div>
+						<div class="detail_sb_imgbox"><img src="img/succeed1.png"/></div>
+						<div class="detail_sb_imgbox"></div>
+						<div class="detail_sb_imgbox"></div>
+					</div>
+				</div>-->
+				<div class="detail_sb_status">
+					<div class="detail_ss_pbox">
+						<div class="detail_ss_progress" style="width:30%;"></div>
+					</div>
+					
+					<div class="detail_ss_box">
+						<div class="detail_sb_imgbox"><img src="img/succeed1.png"/></div>
+						
+						<!--动-->
+						<div style="width:calc(100% - 0.2rem);height: 0.2rem;position: absolute;">
+					       <div class="detail_sb_imgbox_act" style="left:20%;"><img src="img/succeed1.png"/></div>
+					    </div>
+						<div class="detail_sb_imgbox"></div>
+					</div>
+				</div>
+				<div class="detail_sb_money">
+					<div>开团</div>
+					<div>35元</div>
+					<div>30元</div>
+					<div>25元</div>
+				</div>
+			</div>
+			<!--结束-->
+			
+			<div class="detail_box_imgbox">
+				<img src="img/rollscreen.png" alt="" class="detail_bi_img" />
+				<img src="img/rollscreen.png" alt="" class="detail_bi_img" />
+				<img src="img/rollscreen.png" alt="" class="detail_bi_img" />
+				<img src="img/rollscreen.png" alt="" class="detail_bi_img" />
+			</div>
+			<div class="detail_box_text">4人正在拼团，查看更多</div>
+		</div>
+		<div class="detail_rule">
+			<!--<div class="detail_rule_title">
+				<div class="detail_rt_name">活动规则</div>
+			</div>-->
+			<!--<img src="img/rollscreen.png" alt="" class="detail_rt_img" />-->
+			<a href="" class="detail_rt_a">生成分享海报</a>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			//倒计时
+			$(function(){
+				function TimeDown(id, endDateStr) {
+						    //结束时间
+						    var endDate = new Date(endDateStr);
+						    //当前时间
+						    var nowDate = new Date();
+						    //相差的总秒数
+						    var totalSeconds = parseInt((endDate - nowDate) / 1000);
+						    //天数
+						    var days = Math.floor(totalSeconds / (60 * 60 * 24));
+						    //取模（余数）
+						    var modulo = totalSeconds % (60 * 60 * 24);
+						    //小时数
+						    var hours = Math.floor(modulo / (60 * 60));
+						    modulo = modulo % (60 * 60);
+						    //分钟
+						    var minutes = Math.floor(modulo / 60);
+						    //秒
+						    var seconds = modulo % 60;
+						    //输出到页面
+						    ///console.log("还剩:" + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒");
+						    $(".detail_box_button span").eq(0).html(hours);
+						    $(".detail_box_button span").eq(1).html(minutes)
+						    $(".detail_box_button span").eq(2).html(seconds)
+						    
+						}
+			//			延迟一秒执行自己
+						    setInterval(function () {
+						        TimeDown(1, "2019-11-25 8:00:45");
+						    }, 1000)
+			})
+		</script>
+	</body>
+</html>

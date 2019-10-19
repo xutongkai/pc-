@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" href="css/cropper.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.waterfall.js"></script>
+		<script src="js/common.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div class="shitu_mid">
+			<div class="shitu_mleft">
+				<img style="position: absolute; z-index: 0; opacity: 0;" id="image" src="img/gz_icos.png" />
+				<canvas id="canvas"></canvas>
+			</div>
+			
+			<div class="shitu_mright">
+				<div style="box-sizing: border-box;">
+					<div style="width: 100%;">
+						<div class="i_contwrap" id="cont_wrap">
+							<div class="i_contbox">
+								<div class="i_cont_top">
+									<a href="#">
+										<img class="i_cont_ico" src="img/2.jpg" />
+									</a>
+									<div class="i_cli_scbut" style="">
+										<div class="me_upfb_sel">
+											<span>选择画布</span>
+										</div>
+										<div class="uplofb_but">收藏</div>
+									</div>
+									<a class="i_from_href" href="#">
+										<img class="i_from_ico" src="img/image_ico_from.png" /><span>emeiju.com</span>
+									</a>
+									<div class="i_fx_wrap">
+										<img src="img/image_ico_forward.png" />
+									</div>
+								</div>
+								<div class="i_cont_bot">
+									<span></span>
+									<div class="i_cont_bico">
+										<img src="img/contact_ico_more.png" />
+										<div class="i_tk_wrap">
+											<img class="i_tk_jts" src="img/bot.png" />
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_download.png" />
+													<span>下载图片</span>
+												</div>
+											</div>
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_hide.png" />
+													<span>隐藏</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													不在查看类似图片
+												</div>
+											</div>
+											<div class="i_tkw_li itk_jb">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_report.png" />
+													<span>举报</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													图片有违规内容
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="i_contbox">
+								<div class="i_cont_top">
+									<a href="#">
+										<img class="i_cont_ico" src="img/1.jpg" />
+									</a>
+									<div class="i_cli_scbut" style="">
+										<div class="me_upfb_sel">
+											<span>选择画布</span>
+										</div>
+										<div class="uplofb_but">收藏</div>
+									</div>
+									<a class="i_from_href" href="#">
+										<img class="i_from_ico" src="img/image_ico_from.png" /><span>emeiju.com</span>
+									</a>
+									<div class="i_fx_wrap">
+										<img src="img/image_ico_forward.png" />
+									</div>
+								</div>
+								<div class="i_cont_bot">
+									<span></span>
+									<div class="i_cont_bico">
+										<img src="img/contact_ico_more.png" />
+										<div class="i_tk_wrap">
+											<img class="i_tk_jts" src="img/bot.png" />
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_download.png" />
+													<span>下载图片</span>
+												</div>
+											</div>
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_hide.png" />
+													<span>隐藏</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													不在查看类似图片
+												</div>
+											</div>
+											<div class="i_tkw_li itk_jb">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_report.png" />
+													<span>举报</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													图片有违规内容
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="i_contbox">
+								<div class="i_cont_top">
+									<a href="#">
+										<img class="i_cont_ico" src="img/2.jpg" />
+									</a>
+									<div class="i_cli_scbut" style="">
+										<div class="me_upfb_sel">
+											<span>选择画布</span>
+										</div>
+										<div class="uplofb_but">收藏</div>
+									</div>
+									<a class="i_from_href" href="#">
+										<img class="i_from_ico" src="img/image_ico_from.png" /><span>emeiju.com</span>
+									</a>
+									<div class="i_fx_wrap">
+										<img src="img/image_ico_forward.png" />
+									</div>
+								</div>
+								<div class="i_cont_bot">
+									<span></span>
+									<div class="i_cont_bico">
+										<img src="img/contact_ico_more.png" />
+										<div class="i_tk_wrap">
+											<img class="i_tk_jts" src="img/bot.png" />
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_download.png" />
+													<span>下载图片</span>
+												</div>
+											</div>
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_hide.png" />
+													<span>隐藏</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													不在查看类似图片
+												</div>
+											</div>
+											<div class="i_tkw_li itk_jb">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_report.png" />
+													<span>举报</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													图片有违规内容
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="i_contbox">
+								<div class="i_cont_top">
+									<a href="#">
+										<img class="i_cont_ico" src="img/1.jpg" />
+									</a>
+									<div class="i_cli_scbut" style="">
+										<div class="me_upfb_sel">
+											<span>选择画布</span>
+										</div>
+										<div class="uplofb_but">收藏</div>
+									</div>
+									<a class="i_from_href" href="#">
+										<img class="i_from_ico" src="img/image_ico_from.png" /><span>emeiju.com</span>
+									</a>
+									<div class="i_fx_wrap">
+										<img src="img/image_ico_forward.png" />
+									</div>
+								</div>
+								<div class="i_cont_bot">
+									<span></span>
+									<div class="i_cont_bico">
+										<img src="img/contact_ico_more.png" />
+										<div class="i_tk_wrap">
+											<img class="i_tk_jts" src="img/bot.png" />
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_download.png" />
+													<span>下载图片</span>
+												</div>
+											</div>
+											<div class="i_tkw_li">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_hide.png" />
+													<span>隐藏</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													不在查看类似图片
+												</div>
+											</div>
+											<div class="i_tkw_li itk_jb">
+												<div class="i_tkw_litop">
+													<img class="i_tkw_litleft" src="img/image_more_ico_report.png" />
+													<span>举报</span>
+												</div>
+												<div class="i_tkw_litop">
+													<div class="i_tkw_litleft"></div>
+													图片有违规内容
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<!--举报幕布-->
+		<div class="jb_mb_wrap">
+			<div class="login_kuang" style="display: flex; overflow: hidden; max-height: calc(100vh - 32px);">
+				<div class="jbtp_row">
+					<h1 class="jbtp_title">举报图片</h1>
+					<img class="close_jbtp" src="img/btn_close_grey.png" />
+				</div>
+				<div class="jbtp_list">
+					<label class="jbtp_row">
+						<input type="radio" name="jbtp" class="jbtp_radio" />
+						<div class="jbtp_row_right">
+							<span class="jbtp_li_title">垃圾信息</span>
+							<span class="jbtp_li_ms">误导性或重复的帖子</span>
+						</div>
+					</label>
+					<label class="jbtp_row">
+						<input type="radio" name="jbtp" class="jbtp_radio" />
+						<div class="jbtp_row_right">
+							<span class="jbtp_li_title">垃圾信息</span>
+							<span class="jbtp_li_ms">误导性或重复的帖子</span>
+						</div>
+					</label>
+					<label class="jbtp_row">
+						<input type="radio" name="jbtp" class="jbtp_radio" />
+						<div class="jbtp_row_right">
+							<span class="jbtp_li_title">垃圾信息</span>
+							<span class="jbtp_li_ms">误导性或重复的帖子</span>
+						</div>
+					</label>
+					<label class="jbtp_row">
+						<input type="radio" name="jbtp" class="jbtp_radio" />
+						<div class="jbtp_row_right">
+							<span class="jbtp_li_title">垃圾信息</span>
+							<span class="jbtp_li_ms">误导性或重复的帖子</span>
+						</div>
+					</label>
+					<label class="jbtp_row">
+						<input type="radio" name="jbtp" class="jbtp_radio" />
+						<div class="jbtp_row_right">
+							<span class="jbtp_li_title">垃圾信息</span>
+							<span class="jbtp_li_ms">误导性或重复的帖子</span>
+						</div>
+					</label>
+				</div>
+				<div class="jbtp_row" style="justify-content: flex-end;">
+					<div class="jbtp_but jb_qx">取消</div>
+					<div class="jbtp_but jb_next">下一步</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--私信幕布-->
+		<div class="sx_mb_wrap">
+			<div class="login_kuang" style="display: flex; max-height: calc(100vh - 32px);">
+				<div class="jbtp_row">
+					<h1 class="jbtp_title">写私信</h1>
+					<img class="close_jbtp" src="img/btn_close_grey.png" />
+				</div>
+				<input type="text" placeholder="用户名" class="yhm_sx_wrap" />
+				<div class="sxtext_wraps">
+					<textarea class="sxtext_wby"></textarea>
+					
+				</div>
+				<div class="xsx_bot_wrap">
+					<div class="xsx_bot_li xsx_qd_but">确定</div>
+					<div class="xsx_bot_li xsx_xq_but">取消</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--收藏幕布-->
+		<div class="sc_mb_wrap">
+			
+			<div class="login_kuang" style="display: flex; width: 320px; max-height: calc(100vh - 32px);">
+				<div class="jbtp_row" style="padding: 10px 0; ">
+					<h1 class="jbtp_title" style="font-size: 20px;">收藏</h1>
+					<img class="close_sc_mb" style="right: 0; top: 0;" src="img/btn_close_grey.png" />
+				</div>
+				<div class="zg_search_wrap">
+					<div class="zg_search_kk">
+						<img class="zg_sear_ico" src="img/s_top_ico_search.png">
+						<input type="text" placeholder="搜索" class="zg_sear_inp">
+					</div>
+				</div>
+				<div class="zg_tb_wrap">
+					<div class="zg_tb_list">
+						<div class="zg_tb_li">
+							<div class="zg_tbls_li">
+								<img class="zg_tbl_ico" src="img/gz_icos.png">
+								<div class="zg_tbhb_name">45645661</div>
+								<div class="zg_cj_but">发布</div>
+							</div>
+						</div>
+						<div class="zg_tb_li">
+							<div class="zg_tbls_li">
+								<img class="zg_tbl_ico" src="img/gz_icos.png">
+								<div class="zg_tbhb_name">45645661</div>
+								<div class="zg_cj_but">发布</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="me_cjhb_wrap">
+					<img class="me_cjhb_join" src="img/top_ico_add.png">
+					创建图版
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--分享幕布-->
+		<div class="fx_mb_wrap">
+			<div class="fx_tk_wraps">
+				<img class="close_fxmb" src="img/btn_close_grey.png" />
+				<div class="fx_tk_titles">分享图片</div>
+				<div class="fx_tj_wraps">
+					<a href="#" class="fx_tj_liss">
+						<img class="fx_tjli_ico" src="img/sign_ico_sina.png" />
+						<span>微博</span>
+					</a>
+					<a href="#" class="fx_tj_liss">
+						<img class="fx_tjli_ico" src="img/sign_ico_pyq.png" />
+						<span>朋友圈</span>
+					</a>
+					<a href="#" class="fx_tj_liss">
+						<img class="fx_tjli_ico" src="img/sign_ico_wechat.png" />
+						<span>微信</span>
+					</a>
+					<a href="#" class="fx_tj_liss">
+						<img class="fx_tjli_ico" src="img/sign_ico_email.png" />
+						<span>邮箱</span>
+					</a>
+				</div>
+				<div class="fx_tk_titles">站内好友</div>
+				<div class="xx_sear_wraps" style="width:100%;">
+					<img class="xx_sears_ico" src="img/top_ico_search.png" />
+					<input type="text" class="xx_sears_inp" placeholder="昵称或者邮箱" />
+				</div>
+				<div class="xxs_tk_row">
+					<img class="xxs_tkrow_ico" src="img/avatar.png" />
+					<div class="xxs_tkrow_right">
+						<div class="xxs_tkrow_rt">
+							<h2 class="xxs_tkrow_rth2">用户名</h2>
+						</div>
+						<div class="xxs_tkrow_rcont">邮箱</div>
+					</div>
+					<div class="fxtk_fs_but">发送</div>
+				</div>
+				<div class="xxs_tk_row">
+					<img class="xxs_tkrow_ico" src="img/avatar.png" />
+					<div class="xxs_tkrow_right">
+						<div class="xxs_tkrow_rt">
+							<h2 class="xxs_tkrow_rth2">用户名</h2>
+						</div>
+						<div class="xxs_tkrow_rcont">邮箱</div>
+					</div>
+					<div class="fxtk_fs_but">发送</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</body>
+	<script src="js/cropper.js"></script>
+	<script>
+		$('#cont_wrap').waterfall({
+			itemClass: ".i_contbox",
+			minColCount: 1,
+			spacingHeight: 0,
+			spacingWidth: 0,
+			itemAlign:'center',
+			resizeable: true,
+			ajaxCallback: function(success, end) {
+				
+			}
+		})
+//		$('#fb_list').data('plugin_waterfall')._positionAll();
+
+//		$('.shitu_mleft>img').cropper({
+//		    aspectRatio: 16 / 9,
+//		    crop: function(data) {
+//		        // Output the result data for cropping image.
+//		    }
+//		});
+		
+		
+		function start() {
+	      var width = $('#image').width();
+	      var height = $('#image').height();
+	      var croppable = false;
+	      var ismove = 0;
+	      var cropper;
+	      canvas.width = width;
+	      canvas.height = height;
+	      canvas.getContext('2d').drawImage(
+	        this,
+	        0, 0, this.naturalWidth, this.naturalHeight,
+	        0, 0, width, height
+	      );
+	      cropper = new Cropper(canvas,{
+	      	viewMode:3,
+	      	responsive:false,
+	      	zoomable:false,
+	      	mouseWheelZoom:false,
+	      	touchDragZoom:false,
+	      	rotatable:false,
+	      	minContainerWidth:width,
+	      	minContainerHeight:height,
+	      	minCanvasHeight:height,
+	      	minCanvasWidth:width,
+	      	ready: function () {
+	          croppable = true;
+	        },
+	        cropmove:function(){
+	        		ismove = 1;
+	        },
+	      	cropend:function(){
+	      		if(ismove==1){
+	      			var croppedCanvas;
+			        var roundedCanvas;
+			        if (!croppable) {
+			          return;
+			        }
+			        croppedCanvas = cropper.getCroppedCanvas();
+			        roundedCanvas = getRoundedCanvas(croppedCanvas);
+			        console.log(roundedCanvas.toDataURL());
+	      		}
+	      		ismove = 0;
+	      	}
+	      });
+	    }
+	
+	    window.addEventListener('DOMContentLoaded', function () {
+	      var canvas = document.getElementById('canvas');
+	      var image = document.getElementById('image');
+	
+	      if (image.complete) {
+	        start.call(image);
+	      } else {
+	        image.onload = start;
+	      }
+	    });
+		
+		function getRoundedCanvas(sourceCanvas) {
+	      var canvas = document.createElement('canvas');
+	      var context = canvas.getContext('2d');
+	      var width = sourceCanvas.width;
+	      var height = sourceCanvas.height;
+		
+	      canvas.width = width;
+	      canvas.height = height;
+	      context.imageSmoothingEnabled = true;
+	      context.drawImage(sourceCanvas, 0, 0, width, height);
+	      context.globalCompositeOperation = 'destination-in';
+	      context.beginPath();
+	      context.arc(width / 2, height / 2, Math.min(width, height) / 2, 0, 2 * Math.PI, true);
+	      context.fill();
+	      return canvas;
+	    }
+		
+	</script>
+
+</html>

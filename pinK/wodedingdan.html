@@ -1,0 +1,151 @@
+0<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/shop.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript"></script>	
+	</head>
+
+	<body style="background-color: #F8F8F8;">
+		
+		<div class="s_shop_nav">
+			<div class="s_nav_left">
+				<img class="s_logo" src="img/s_logo_top.png" />
+				易美居福利社
+			</div>
+			<div class="s_nav_list">
+				<a class="s_nav_li" href="#">赚积分</a>
+				<a class="s_nav_li" href="#">申请成为供应商</a>
+				<a class="s_nav_li" href="#">规则解读</a>
+				<a class="s_nav_li" href="#">在线客服</a>
+				<a class="s_nav_li" href="#">设计库首页</a>
+			</div>
+		</div>
+		
+		<div class="s_shop_tp">
+			<img class="s_shop_logo" src="img/s_logo.png" />
+			<div class="s_shop_right">
+				
+				<div class="s_isearch_wrap">
+					<input class="s_isearch_inp" type="text" placeholder="搜索商品名称" />
+					<img class="s_isearch_ico" src="img/s_top_ico_search.png" />
+				</div>
+				
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_shopcart.png" />
+				</a>
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_self.png" />
+					<span class="s_cart_num">4</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="s_i_middle">
+			<div class="s_centerbox">
+				<div class="s_centerbox-left">
+					<div class="s_centerbox-left-list" id="wodejifen">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_jifen@2x.png"/>
+						<div class="s_centerbox-left-list-text s_centerbox-left-list-text-hover" style="color:#999;">我的积分</div>
+					</div>
+					<div class="s_centerbox-left-list" id="wodedingdan">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_ordered@2x.png"/>
+						<div class="s_centerbox-left-list-text" style="color:#333;">我的订单</div>
+					</div>
+					<div class="s_centerbox-left-list" id="shouhuodizhi">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_address@2x.png"/>
+						<div class="s_centerbox-left-list-text">收货地址</div>
+					</div>
+				</div>
+				
+				<!--我的订单-->
+				<div class="s_receivingAddress wodedingdan">
+					<div class="s_receivingAdress-top">
+						<div class="s_receivingAdress-top-left">我的订单</div>
+
+					</div>
+					<div class="s_receivingAdress-bottom">
+						<div class="s_dingdan-nav">
+							<div class="s_dingdan-nav-whole">全部订单</div>
+							<div class="s_dingdan-nav-pay">待付款</div>
+							<div class="s_dingdan-nav-takeover">待收货</div>
+							<div class="s_dingdan-nav-box">
+								<input class="s_dingdan-nav-box-input" placeholder="商品名称/编号" type="" name="" id="" value="" />
+								<div class="s_dingdan-nav-box-box">
+									<img class="s_dingdan-nav-box-box-img" src="img/s_top_ico_search.png" alt="" class="s_dingdan-nav-box-box-img" />
+								</div>
+							</div>
+						</div>
+						<div class="s_dingdan-title">
+							<div class="s_dingdan-details">订单详情</div>
+							<div class="s_dingdan-people">收货人</div>
+							<div class="s_dingdan-money">金额</div>
+							<div class="s_dingdan-status">状态</div>
+							<div class="s_dingdan-operate">操作</div>
+						</div>
+						<div class="s_dingdan-content">
+							<div class="s_dingdan-content-title">
+								<div class="s_dingdan-content-title-time">2019-08-12 09:19:16</div>
+								<div class="s_dingdan-content-title-number">订单号：<text>123456789000</text></div>
+								<img src="img/shop_order_ico_delete@2x.png" alt="" class="s_dingdan-content-title-img" />
+							</div>
+							<div class="s_dingdan-content-list">
+								<div class="s_dingdan-content-list-content">
+									<img src="img/1.jpg" alt="" class="s_dingdan-content-list-img" />
+									<div class="s_dingdan-content-list-content-text">
+										<div class="s_dingdan-content-list-content-text-title">不锈钢免钉卫浴置物挂件</div>
+										<div class="s_dingdan-content-list-content-text-explain">勒托304免钉</div>
+									</div>
+									<div class="s_dingdan-content-list-content-text2">
+										<div class="s_dingdan-content-list-content-text2-status">已发货</div>
+										<a class="s_dingdan-content-list-content-text2-a" href="">查看详情</a>
+									</div>
+								</div>
+								<div class="s_dingdan-content-list-money">
+									<div class="s_dingdan-content-list-money-number">￥59.00</div>
+									<div class="s_dingdan-content-list-money-explain">（含运费：￥10.00元）</div>
+								</div>
+								<div class="s_dingdan-content-list-evaluate">评价晒单</div>
+							</div>
+							<div class="s_dingdan-content-list">
+								<div class="s_dingdan-content-list-content">
+									<img src="img/1.jpg" alt="" class="s_dingdan-content-list-img" />
+									<div class="s_dingdan-content-list-content-text">
+										<div class="s_dingdan-content-list-content-text-title">不锈钢免钉卫浴置物挂件</div>
+										<div class="s_dingdan-content-list-content-text-explain">勒托304免钉</div>
+									</div>
+									<div class="s_dingdan-content-list-content-text2">
+										<div class="s_dingdan-content-list-content-text2-status">已发货</div>
+										<a class="s_dingdan-content-list-content-text2-a" href="">查看详情</a>
+									</div>
+								</div>
+								<div class="s_dingdan-content-list-money">
+									<div class="s_dingdan-content-list-money-number">￥59.00</div>
+									<div class="s_dingdan-content-list-money-explain">（含运费：￥10.00元）</div>
+								</div>
+								<div class="s_dingdan-content-list-evaluate">评价晒单</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			
+			
+
+		
+		
+		
+		
+	</body>
+
+
+</html>
+

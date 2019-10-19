@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我创建的拼团</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body style="background: #F7F7F7;">
+		<div class="mine_box">
+			<div class="mine_box_title">天道欧洲领航-马歇尔留学计划（步入欧洲名校殿堂，开启品质留学之旅）</div>
+			<div class="mine_box_center">
+				<div class="mine_bc_status">拼团中</div>
+				<div class="mine_bc_text">5人拼团</div>
+				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+			</div>
+			<div class="mine_box_money">
+				<div class="mine_bm_new">￥35.00</div>
+				<div class="mine_bm_old">￥35.00</div>
+			</div>
+		</div>
+		<div class="mine_box">
+			<div class="mine_box_title">天道欧洲领航-马歇尔留学计划（步入欧洲名校殿堂，开启品质留学之旅）</div>
+			<div class="mine_box_center">
+				<div class="mine_bc_status">拼团中</div>
+				<div class="mine_bc_text">5人拼团</div>
+				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+			</div>
+			<div class="mine_box_money">
+				<div class="mine_bm_new">￥35.00</div>
+				<div class="mine_bm_old">￥35.00</div>
+			</div>
+		</div>
+		<div class="mine_box">
+			<div class="mine_box_title">天道欧洲领航-马歇尔留学计划（步入欧洲名校殿堂，开启品质留学之旅）</div>
+			<div class="mine_box_center">
+				<div class="mine_bc_status">拼团中</div>
+				<div class="mine_bc_text">5人拼团</div>
+				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+			</div>
+			<div class="mine_box_money">
+				<div class="mine_bm_new">￥35.00</div>
+				<div class="mine_bm_old">￥35.00</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			//倒计时
+			$(function(){
+				function TimeDown(i, endDateStr) {
+						    //结束时间
+						    var endDate = new Date(endDateStr);
+						    //当前时间
+						    var nowDate = new Date();
+						    //相差的总秒数
+						    var totalSeconds = parseInt((endDate - nowDate) / 1000);
+						    //天数
+						    var days = Math.floor(totalSeconds / (60 * 60 * 24));
+						    //取模（余数）
+						    var modulo = totalSeconds % (60 * 60 * 24);
+						    //小时数
+						    var hours = Math.floor(modulo / (60 * 60));
+						    modulo = modulo % (60 * 60);
+						    //分钟
+						    var minutes = Math.floor(modulo / 60);
+						    //秒
+						    var seconds = modulo % 60;
+						    //输出到页面
+						    ///console.log("还剩:" + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒");
+						    console.log(i);
+						     $(".mine_bc_time").eq(i).html("还剩:" + days + ":" + hours + ":" + minutes + ":" + seconds)
+						    if(hours==0&minutes==0&seconds==0){
+						    	clearInterval(timer);
+						    }
+						}
+				
+			//			延迟一秒执行自己
+							
+								var index = $(".mine_box").length;
+								var time = ["2019-10-18 22:05:15","2019-10-18 22:25:58","2019-10-18 12:25:11"];
+								for(let i=0;i<index;i++){
+									console.log(time[i]);
+										var timer = setTimeout(function () {
+								        TimeDown(i,time[i]);
+								    }, 1000);
+									
+								}
+							
+							
+							
+						    
+			})
+		</script>
+	</body>
+</html>

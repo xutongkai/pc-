@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分页</title>
+		<link rel="stylesheet" href="./layui/layui/css/layui.css" media="all">
+		<style type="text/css">
+			.pagination{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test1"></div>
+		<ul class="pagination">
+			<li class="disabled"><span>«</span></li>
+			<li class="active"><span>1</span></li>
+			<li><a href=" ">2</a></li>
+			<li><a href="/backstage/drug_search/index?page=3"><a>3</a></li>
+			<li><a href="/backstage/drug_search/index?page=4"><a>4</a></li>
+			<li><a href="/backstage/drug_search/index?page=5"><a>5</a></li>
+			<li><a href="/backstage/drug_search/index?page=6"><a>6</a></li>
+			<li><a href="/backstage/drug_search/index?page=7"><a>7</a></li>
+			<li><a href="/backstage/drug_search/index?page=8"><a>8</a></li>
+			<li class="disabled"><span>...</span></li>
+			<li><a href="/backstage/drug_search/index?page=1224"><a>1224</a></li>
+			<li><a href="/backstage/drug_search/index?page=1225"><a>1225</a></li>
+			<li><a href="/backstage/drug_search/index?page=2"><a>»</a></li>
+			
+		</ul>
+		<script src="./layui/layui/layui.js"></script>
+		<script>
+		layui.use('laypage', function(){
+		  var laypage = layui.laypage;
+		 
+		  //执行一个laypage实例
+		  laypage.render({
+		    elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+		    ,count: 100 //数据总数，从服务端得到
+		  });
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+0<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/shop.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript"></script>	
+	</head>
+
+	<body style="background-color: #F8F8F8;">
+		
+		<div class="s_shop_nav">
+			<div class="s_nav_left">
+				<img class="s_logo" src="img/s_logo_top.png" />
+				易美居福利社
+			</div>
+			<div class="s_nav_list">
+				<a class="s_nav_li" href="#">赚积分</a>
+				<a class="s_nav_li" href="#">申请成为供应商</a>
+				<a class="s_nav_li" href="#">规则解读</a>
+				<a class="s_nav_li" href="#">在线客服</a>
+				<a class="s_nav_li" href="#">设计库首页</a>
+			</div>
+		</div>
+		
+		<div class="s_shop_tp">
+			<img class="s_shop_logo" src="img/s_logo.png" />
+			<div class="s_shop_right">
+				
+				<div class="s_isearch_wrap">
+					<input class="s_isearch_inp" type="text" placeholder="搜索商品名称" />
+					<img class="s_isearch_ico" src="img/s_top_ico_search.png" />
+				</div>
+				
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_shopcart.png" />
+				</a>
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_self.png" />
+					<span class="s_cart_num">4</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="s_i_middle">
+			<div class="s_centerbox">
+				<div class="s_centerbox-left">
+					<div class="s_centerbox-left-list" id="wodejifen">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_jifen@2x.png"/>
+						<div class="s_centerbox-left-list-text s_centerbox-left-list-text-hover" style="color:#999;">我的积分</div>
+					</div>
+					<div class="s_centerbox-left-list" id="wodedingdan">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_order@2x.png"/>
+						<div class="s_centerbox-left-list-text">我的订单</div>
+					</div>
+					<div class="s_centerbox-left-list" id="shouhuodizhi">
+						<img class="s_centerbox-left-list-img" src="img/shop_ico_addressed@2x.png"/>
+						<div class="s_centerbox-left-list-text" style="color:#333;">收货地址</div>
+					</div>
+				</div>
+				
+				<!--收货地址-->
+				<div class="s_receivingAddress shouhuodizhi">
+					<div class="s_receivingAdress-top">
+						<div class="s_receivingAdress-top-left">收货地址</div>
+						<div class="s_receivingAdress-top-right"><text>+</text>收货地址</div>
+					</div>
+					<div class="s_receivingAdress-bottom">
+						<div class="s_receivingAdress-bottom-title">
+							<div class="s_receivingAdress-bottom-title-man">收货人</div>
+							<div class="s_receivingAdress-bottom-title-address">地址</div>
+							<div class="s_receivingAdress-bottom-title-contact">联系方式</div>
+							<div class="s_receivingAdress-bottom-title-operate">操作</div>
+						</div>
+						<div class="s_receivingAdress-bottom-list">
+							<div class="s_receivingAdress-bottom-list-name">诸葛亮</div>
+							<div class="s_receivingAdress-bottom-list-address">山东省临沂市河东区荣盛沂河馨苑A区</div>
+							<div class="s_receivingAdress-bottom-list-phone">15653308321</div>
+							<div class="s_receivingAdress-bottom-list-box">
+								<div class="s_receivingAdress-bottom-list-box-edit">编辑</div>
+								<div class="s_receivingAdress-bottom-list-box-delate">删除</div>
+							</div>
+							<div class="s_receivingAdress-bottom-list-default">设为默认地址</div>
+						</div>
+						<div class="s_receivingAdress-bottom-list">
+							<div class="s_receivingAdress-bottom-list-name">诸葛亮</div>
+							<div class="s_receivingAdress-bottom-list-address">山东省临沂市河东区荣盛沂河馨苑A区</div>
+							<div class="s_receivingAdress-bottom-list-phone">15653308321</div>
+							<div class="s_receivingAdress-bottom-list-box">
+								<div class="s_receivingAdress-bottom-list-box-edit">编辑</div>
+								<div class="s_receivingAdress-bottom-list-box-delate">删除</div>
+							</div>
+							<div class="s_receivingAdress-bottom-list-default">设为默认地址</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			
+			
+
+		
+		
+		
+		
+	</body>
+
+
+</html>
+
+
+<script>
+	$(function(){
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 4000, //可选选项，自动滑动
+			effect: 'fade',
+			loop: true,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+		})
+	})
+</script>
+

@@ -1,0 +1,114 @@
+0<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/shop.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript"></script>	
+		<script type="text/javascript" src="js/wodejifen.js"></script>
+	</head>
+
+	<body style="background-color: #F8F8F8;">
+		
+		<div class="s_shop_nav">
+			<div class="s_nav_left">
+				<img class="s_logo" src="img/s_logo_top.png" />
+				易美居福利社
+			</div>
+			<div class="s_nav_list">
+				<a class="s_nav_li" href="#">赚积分</a>
+				<a class="s_nav_li" href="#">申请成为供应商</a>
+				<a class="s_nav_li" href="#">规则解读</a>
+				<a class="s_nav_li" href="#">在线客服</a>
+				<a class="s_nav_li" href="#">设计库首页</a>
+			</div>
+		</div>
+		
+		<div class="s_shop_tp">
+			<img class="s_shop_logo" src="img/s_logo.png" />
+			<div class="s_shop_right">
+				
+				<div class="s_isearch_wrap">
+					<input class="s_isearch_inp" type="text" placeholder="搜索商品名称" />
+					<img class="s_isearch_ico" src="img/s_top_ico_search.png" />
+				</div>
+				
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_shopcart.png" />
+				</a>
+				<a class="s_shop_tp_href" href="#">
+					<img class="s_tp_gwc_ico" src="img/s_shop_icon_self.png" />
+					<span class="s_cart_num">4</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="s_i_middle">
+			<div class="s_appiaise">
+				<div class="s_appiaise-left">
+					<img src="img/2.jpg" alt="" class="s_appiaise-left-img" />
+					<div class="s_appiaise-left-title">不锈钢免钉卫浴置物挂件</div>
+					<div class="s_appiaise-left-name">勒托304免钉</div>
+					<div class="s_appiaise-left-accumul">50000积分</div>
+				</div>
+				<div class="s_appiaise-right">
+					<div class="s_appiaise-right-name">评价订单</div>
+					<div class="s_appiaise-right-number">
+						<div class="s_appiaise-right-number-number">订单号：<text>20190508122222</text></div>
+						<div class="s_appiaise-right-number-time">2019-05-08  19:33:30</div>
+					</div>
+					<div class="s_appiaise-right-grade">
+						<div class="s_appiaise-right-grade-name">商品评分</div>
+						<div class="s_appiaise-right-grade-name-box">
+							<img src="img/pj_ico_star_s@2x.png" alt="" class="s_appiaise-right-grade-name-box-img" />
+							<img src="img/pj_ico_star_s@2x.png" alt="" class="s_appiaise-right-grade-name-box-img" />
+							<img src="img/pj_ico_star_s@2x.png" alt="" class="s_appiaise-right-grade-name-box-img" />
+							<img src="img/pj_ico_star_s@2x.png" alt="" class="s_appiaise-right-grade-name-box-img" />
+							<img src="img/pj_ico_star@2x.png" alt="" class="s_appiaise-right-grade-name-box-img" />
+						</div>
+						<div class="s_appiaise-right-grade-name-number">4分</div>
+					</div>
+					<div class="s_appiaise-right-shineupon">
+						<div class="s_appiaise-right-shineupon-name">评价晒单</div>
+						<textarea class="s_appiaise-right-shineupon-box"></textarea>
+					</div>
+					<div class="s_appiaise-right-upload">
+						<div class="s_appiaise-right-upload-box">
+							<img class="s_appiaise-right-upload-img" src="img/pj_ico_camera@2x.png"/>
+							<div class="s_appiaise-right-upload-text">上传图片</div>
+						</div>
+						<div class="s_appiaise-right-upload-box">
+							<img class="s_appiaise-right-upload-img" src="img/pj_ico_camera@2x.png"/>
+							<div class="s_appiaise-right-upload-text">上传图片</div>
+						</div>
+						<div class="s_appiaise-right-upload-box">
+							<img class="s_appiaise-right-upload-img" src="img/pj_ico_camera@2x.png"/>
+							<div class="s_appiaise-right-upload-text">上传图片</div>
+						</div>
+					</div>
+					<div class="s_appiaise-right-buttom">发表评论</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script>
+	$(function(){
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 4000, //可选选项，自动滑动
+			effect: 'fade',
+			loop: true,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+		})
+	})
+</script>
+
+
