@@ -13,7 +13,7 @@
 			<div class="mine_box_center">
 				<div class="mine_bc_status">拼团中</div>
 				<div class="mine_bc_text">5人拼团</div>
-				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+				<div class="mine_bc_time" time="2019-10-22 09:16:15">剩余<span></span>：<span></span>：<span></span></div>
 			</div>
 			<div class="mine_box_money">
 				<div class="mine_bm_new">￥35.00</div>
@@ -25,7 +25,7 @@
 			<div class="mine_box_center">
 				<div class="mine_bc_status">拼团中</div>
 				<div class="mine_bc_text">5人拼团</div>
-				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+				<div class="mine_bc_time" time="2019-10-22 09:16:15">剩余<span></span>：<span></span>：<span></span></div>
 			</div>
 			<div class="mine_box_money">
 				<div class="mine_bm_new">￥35.00</div>
@@ -37,7 +37,7 @@
 			<div class="mine_box_center">
 				<div class="mine_bc_status">拼团中</div>
 				<div class="mine_bc_text">5人拼团</div>
-				<div class="mine_bc_time">剩余<span></span>：<span></span>：<span></span></div>
+				<div class="mine_bc_time" time="2021-10-18 22:05:15">剩余<span></span>：<span></span>：<span></span></div>
 			</div>
 			<div class="mine_box_money">
 				<div class="mine_bm_new">￥35.00</div>
@@ -48,49 +48,52 @@
 		<script type="text/javascript">
 			//倒计时
 			$(function(){
-				function TimeDown(i, endDateStr) {
-						    //结束时间
-						    var endDate = new Date(endDateStr);
-						    //当前时间
-						    var nowDate = new Date();
-						    //相差的总秒数
-						    var totalSeconds = parseInt((endDate - nowDate) / 1000);
-						    //天数
-						    var days = Math.floor(totalSeconds / (60 * 60 * 24));
-						    //取模（余数）
-						    var modulo = totalSeconds % (60 * 60 * 24);
-						    //小时数
-						    var hours = Math.floor(modulo / (60 * 60));
-						    modulo = modulo % (60 * 60);
-						    //分钟
-						    var minutes = Math.floor(modulo / 60);
-						    //秒
-						    var seconds = modulo % 60;
-						    //输出到页面
-						    ///console.log("还剩:" + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒");
-						    console.log(i);
-						     $(".mine_bc_time").eq(i).html("还剩:" + days + ":" + hours + ":" + minutes + ":" + seconds)
-						    if(hours==0&minutes==0&seconds==0){
-						    	clearInterval(timer);
-						    }
+				function TimeDown(dom, endDateStr) {
+							function time(dom,endDateStr){
+									//结束时间
+								    var endDate = new Date(endDateStr);
+								    //当前时间
+								    var nowDate = new Date();
+								    //相差的总秒数
+								    var totalSeconds = parseInt((endDate - nowDate) / 1000);
+								    //天数
+								    var days = Math.floor(totalSeconds / (60 * 60 * 24));
+								    //取模（余数）
+								    var modulo = totalSeconds % (60 * 60 * 24);
+								    //小时数
+								    var hours = Math.floor(modulo / (60 * 60));
+								    modulo = modulo % (60 * 60);
+								    //分钟
+								    var minutes = Math.floor(modulo / 60);
+								    //秒
+								    var seconds = modulo % 60;
+								    //输出到页面
+								    ///console.log("还剩:" + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒");
+								    $(dom).html("还剩:" + days + ":" + hours + ":" + minutes + ":" + seconds);
+		//						     $(".mine_bc_time").eq(i).html("还剩:" + days + ":" + hours + ":" + minutes + ":" + seconds)
+									if(totalSeconds<=0){
+//										if(timer){
+											clearInterval(timer);
+//										}									
+									}
+							}						    
+						    var timer = setInterval(function(){
+						    	time(dom,endDateStr);
+						    },1000);
 						}
 				
 			//			延迟一秒执行自己
 							
-								var index = $(".mine_box").length;
-								var time = ["2019-10-18 22:05:15","2019-10-18 22:25:58","2019-10-18 12:25:11"];
-								for(let i=0;i<index;i++){
-									console.log(time[i]);
-										var timer = setTimeout(function () {
-								        TimeDown(i,time[i]);
-								    }, 1000);
-									
+								var arr = $(".mine_bc_time");
+								for(let i=0;i<arr.length;i++){
+									TimeDown(arr[i],$(arr[i]).attr("time"));
 								}
 							
-							
-							
-						    
-			})
-		</script>
+							})
+			
+			
+			
+</script>		
+		
 	</body>
 </html>
